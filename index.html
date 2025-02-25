@@ -1,45 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOGO</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-        </style>
-</head>
-<body>
-
-   <div class="bogo-header">
-    <span class="spanLeft"></span>
-  <h4>YAY! It's BOGO</h4>
-  <span class="spanLeft"></span>
-</div>
-
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    </style>
+  </head>
+  <body>
     <div class="container">
-        
-        <div style="border: 2px solid black" class="optionOne">
-            <div style="border: 2px solid red;" class="pricingOption">
-                <div>
-                    <input type="radio" id="one-unit" name="unit" checked>
-                </div>
-                <div>
-                    <div>
-                        <span class="unit-text"><b>1 Unit</b></span>
-                        <span class="discount">10% Off</span>
-                    </div>
-                    <span class="standard-price">Standard Price</span>
-                </div>
+      <div class="bogo-header">
+        <span class="spanLeft"></span>
+        <h4>YAY! It's BOGO</h4>
+        <span class="spanLeft"></span>
+      </div>
+      <div class="card">
+        <div class="optionOne">
+          <div class="pricingOption">
+            <input type="radio" checked />
+            <div class="unit">
+              <div class="unit-item">
+                <p class="unit-text"><b>1 Unit</b></p>
+                <p class="discount">10% Off</p>
+              </div>
+              <p class="standard-price">Standard Price</p>
             </div>
-            <div style="border: 2px solid yellow" class="price">
-                <span class="current-price">$10.00 USD</span>
-                <span class="original-price">$24.00 USD</span>
+          </div>
+          <div class="price">
+            <p class="current-price">$10.00 USD</p>
+            <p class="original-price">$24.00 USD</p>
+          </div>
+        </div>
+        <div class="container-size-color">
+            <div class="size-color">
+                <span></span>
+                <p class="label">Size <span class="required-dot">*</span></p>
+                <p class="label">Colour</p>
+                
+                <p class="index">#1</p>
+                <select class="dropdown">
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+                <select class="dropdown">
+                  <option>Black</option>
+                  <option>Red</option>
+                  <option>Blue</option>
+                </select>
+              
+                <p class="index">#2</p>
+                <select class="dropdown">
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+                <select class="dropdown">
+                  <option>Colour</option>
+                  <option>Black</option>
+                  <option>White</option>
+                </select>
+              </div>
+              
+        </div>
+      </div>
+      <div class="card">
+        <div class="optionOne">
+          <div class="pricingOption">
+            <input type="radio" checked />
+            <div class="unit">
+              <div class="unit-item">
+                <p class="unit-text"><b>1 Unit</b></p>
+                <p class="discount">10% Off</p>
+              </div>
+              <p class="standard-price">Standard Price</p>
             </div>
-       
+          </div>
+          <div class="price">
+            <p class="current-price">$10.00 USD</p>
+            <p class="original-price">$24.00 USD</p>
+          </div>
+        </div>
+        <div class="container-size-color">
+            <div class="size-color">
+                <span></span>
+                <p class="label">Size <span class="required-dot">*</span></p>
+                <p class="label">Colour</p>
+                
+                <p class="index">#1</p>
+                <select class="dropdown">
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+                <select class="dropdown">
+                  <option>Black</option>
+                  <option>Red</option>
+                  <option>Blue</option>
+                </select>
+              
+                <p class="index">#2</p>
+                <select class="dropdown">
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+                <select class="dropdown">
+                  <option>Colour</option>
+                  <option>Black</option>
+                  <option>White</option>
+                </select>
+              </div>
+              
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>

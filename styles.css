@@ -1,13 +1,26 @@
-body{
-    background: #FFFFFF;
-    font-family: "Inter", serif;
+/* General Styles */
+body {
+  background: #ffffff;
+  font-family: "Inter", serif;
+  margin: 0;
+  padding: 0;
+}
+/* Remove default padding/margin from p tags */
+p, h4 {
+  margin: 0;
+  padding: 0;
 }
 
+.container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+/* BOGO Header */
 .bogo-header {
   width: 343px;
-  height: 24px;
-  top: 39px;
-  left: 59px;
   color: #ff6b82;
   display: flex;
   align-items: center;
@@ -15,57 +28,175 @@ body{
 }
 
 .bogo-header h4 {
-  width: 143px;
-  height: 24px;
-  top: 39px;
-  left: 159px;
-  
   text-align: center;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.spanLeft {
-  width: 91.65px;
-  height: 0px;
-  top: 51.59px;
-  left: 59px;
-  border: 0.9px solid #c8c8c8;
-}
-
+.spanLeft,
 .spanRight {
-  width: 96.63398742675818px;
-  height: 0px;
-  top: 51.59px;
-  left: 305.37px;
+  flex: 1;
+  height: 0;
   border: 0.9px solid #c8c8c8;
 }
 
-.container {
+/* Card */
+.card {
   width: 341px;
-height: 363.1118469238281px;
-top: 82px;
-left: 59px;
-
-  
+  min-height: fit-content; /* Allow height to expand */
+  border: 0.9px solid #c8c8c8;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: all 0.3s ease-in-out; /* Smooth height transition */
 }
 
+/* Option Section */
 .optionOne {
-width: 341px;
-height: 74.11185455322266px;
-top: 82px;
-left: 59px;
-border: 0.9px solid #c8c8c8;
-display: flex;
-align-items: center;
-justify-content: space-between;
-box-sizing: border-box;
-padding: 10px;
-margin-bottom: 19.89px;
-margin-top: 19.89px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.pricingOption{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+/* Pricing Options */
+.pricingOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Unit Section */
+.unit {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.unit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.unit-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.discount {
+  font-size: 12px;
+  background-color: #ff6b82;
+  padding: 1px 5px;
+  border-radius: 2px;
+  color: white;
+}
+
+.standard-price {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Price Section */
+.price :first-child {
+  font-size: 14.46px;
+  font-weight: 500;
+  color: #000;
+}
+
+.price :nth-child(2) {
+  font-size: 10px;
+  text-decoration: line-through;
+  color: #c8c8c8;
+}
+
+/* Radio Button Styling */
+input[type="radio"] {
+  appearance: none;
+  width: 14.46px;
+  height: 14.46px;
+  border: 1px solid #ff6b82;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 9.04px;
+  height: 9.04px;
+  background-color: #ff6b82; /* Inner filled circle */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Hide by default */
+}
+
+input[type="radio"]:checked::before {
+  display: block; /* Show when checked */
+}
+
+/* Hidden Section (Size & Color) */
+.container-size-color {
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Show on Hover */
+.card:hover .container-size-color {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100px; /* Adjust based on content */
+}
+
+
+
+.size-color {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+  max-width: 300px;
+  background: #fff;
+  padding: 10px;
+}
+
+/* Labels */
+.label {
+  font-weight: 600;
+  /* text-align: left; */
+}
+
+/* .required-dot {
+  color: red;
+  font-size: 12px;
+} */
+
+/* Index (#1, #2) */
+.index {
+  /* font-weight: bold; */
+  text-align: right;
+}
+
+/* Dropdowns */
+.dropdown {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
 }
