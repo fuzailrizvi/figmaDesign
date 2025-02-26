@@ -1,11 +1,11 @@
-/* General Styles */
+
 body {
   background: #ffffff;
   font-family: "Inter", serif;
   margin: 0;
   padding: 0;
 }
-/* Remove default padding/margin from p tags */
+
 p, h4 {
   margin: 0;
   padding: 0;
@@ -22,9 +22,10 @@ p, h4 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 9.8px;
+  margin-top: 50px;
 
 }
-/* BOGO Header */
+
 .bogo-header {
   width: 343px;
   color: #ff6b82;
@@ -46,18 +47,18 @@ p, h4 {
   border: 0.9px solid #c8c8c8;
 }
 
-/* Card */
+
 .card {
   width: 341px;
-  min-height: fit-content; /* Allow height to expand */
+  min-height: fit-content; 
   border: 0.9px solid #c8c8c8;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in-out; /* Smooth height transition */
+  transition: all 0.3s ease-in-out; 
   position: relative;
 }
 
-/* Option Section */
+
 .optionOne {
   display: flex;
   align-items: center;
@@ -65,14 +66,14 @@ p, h4 {
   padding: 10px;
 }
 
-/* Pricing Options */
+
 .pricingOption {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Unit Section */
+
 .unit {
   display: flex;
   flex-direction: column;
@@ -105,7 +106,7 @@ p, h4 {
   font-weight: 400;
 }
 
-/* Price Section */
+
 .price :first-child {
   font-size: 14.46px;
   font-weight: 500;
@@ -122,25 +123,25 @@ input[type="radio"] {
   appearance: none;
   width: 14.46px;
   height: 14.46px;
-  border: 1px solid #c8c8c8; /* Default gray border */
+  border: 1px solid #c8c8c8; 
   border-radius: 50%;
   display: inline-block;
   position: relative;
   background-color: white;
   cursor: pointer;
-  transition: border 0.3s ease; /* Smooth transition */
+  transition: border 0.3s ease; 
 }
 
-/* Change border color when checked */
+
 input[type="radio"]:checked {
-  border-color: #ff6b82; /* Change to red when selected */
+  border-color: #ff6b82; 
 }
 
 input[type="radio"]::before {
   content: "";
   width: 9.04px;
   height: 9.04px;
-  background-color: #ff6b82; /* Inner filled circle */
+  background-color: #ff6b82; 
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -149,13 +150,13 @@ input[type="radio"]::before {
   display: none; /* Hide by default */
 }
 
-/* Show inner circle when checked */
+
 input[type="radio"]:checked::before {
   display: block;
 }
 
 
-/* Hidden Section (Size & Color) */
+
 .container-size-color {
   padding: 10px;
   opacity: 0;
@@ -167,7 +168,7 @@ input[type="radio"]:checked::before {
   justify-content: flex-start;
 }
 
-/* Show on Hover */
+
 .card:hover{
   background-color: #FFF9FA;
   ;
@@ -191,27 +192,24 @@ input[type="radio"]:checked::before {
   padding: 10px;
 }
 
-/* Labels */
+
 .label {
   font-weight: 400;
   font-size: 9.94px;
 }
 
-/* .required-dot {
-  color: red;
-  font-size: 12px;
-} */
 
-/* Index (#1, #2) */
+
+
 .index {
-  /* font-weight: bold; */
+  
   text-align: right;
   font-size: 9.04px;
   line-height: 10.94px;
   font-weight: 400;
 }
 
-/* Dropdowns */
+
 .dropdown {
   width: 65.98px;
   height: 25.31px;
@@ -228,7 +226,7 @@ input[type="radio"]:checked::before {
   background-position: right 10px center;
   appearance: none;
   background-size: 5.42px;
-  /* padding-right: 30px; */
+
 
 }
 
@@ -275,5 +273,52 @@ input[type="radio"]:checked::before {
   justify-content: center;
   cursor: pointer;
 }
+
+.most-popular {
+  position: absolute;
+  top: -12px; 
+  right: 10px; 
+  background-color: #ff6b82;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  z-index: 10;
+  height: 10px;
+}
+
+
+.most-popular::before,
+.most-popular::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+
+.most-popular::before {
+  left: -8px;
+  border-width: 10px 8px 10px 0;
+  border-color: transparent #ff6b82 transparent transparent;
+}
+
+.most-popular::after {
+  right: -8px;
+  border-width: 10px 0 10px 8px;
+  border-color: transparent transparent transparent #ff6b82;
+}
+
+
+
+
+
 
 
