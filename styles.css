@@ -11,12 +11,18 @@ p, h4 {
   padding: 0;
 }
 
+
+
 .container{
-  width: 100vw;
+  width: 341px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 9.8px;
+
 }
 /* BOGO Header */
 .bogo-header {
@@ -47,8 +53,8 @@ p, h4 {
   border: 0.9px solid #c8c8c8;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   transition: all 0.3s ease-in-out; /* Smooth height transition */
+  position: relative;
 }
 
 /* Option Section */
@@ -112,17 +118,22 @@ p, h4 {
   color: #c8c8c8;
 }
 
-/* Radio Button Styling */
 input[type="radio"] {
   appearance: none;
   width: 14.46px;
   height: 14.46px;
-  border: 1px solid #ff6b82;
+  border: 1px solid #c8c8c8; /* Default gray border */
   border-radius: 50%;
   display: inline-block;
   position: relative;
   background-color: white;
   cursor: pointer;
+  transition: border 0.3s ease; /* Smooth transition */
+}
+
+/* Change border color when checked */
+input[type="radio"]:checked {
+  border-color: #ff6b82; /* Change to red when selected */
 }
 
 input[type="radio"]::before {
@@ -138,9 +149,11 @@ input[type="radio"]::before {
   display: none; /* Hide by default */
 }
 
+/* Show inner circle when checked */
 input[type="radio"]:checked::before {
-  display: block; /* Show when checked */
+  display: block;
 }
+
 
 /* Hidden Section (Size & Color) */
 .container-size-color {
@@ -155,10 +168,15 @@ input[type="radio"]:checked::before {
 }
 
 /* Show on Hover */
+.card:hover{
+  background-color: #FFF9FA;
+  ;
+}
 .card:hover .container-size-color {
   opacity: 1;
   visibility: visible;
-  max-height: 100px; /* Adjust based on content */
+  max-height: 100px;
+ 
 }
 
 
@@ -166,18 +184,17 @@ input[type="radio"]:checked::before {
 .size-color {
   display: grid;
   grid-template-columns: auto 1fr 1fr;
-  gap: 10px;
+  gap: 7px;
   align-items: center;
   width: fit-content;
   max-width: 300px;
-  background: #fff;
   padding: 10px;
 }
 
 /* Labels */
 .label {
-  font-weight: 600;
-  /* text-align: left; */
+  font-weight: 400;
+  font-size: 9.94px;
 }
 
 /* .required-dot {
@@ -189,14 +206,74 @@ input[type="radio"]:checked::before {
 .index {
   /* font-weight: bold; */
   text-align: right;
+  font-size: 9.04px;
+  line-height: 10.94px;
+  font-weight: 400;
 }
 
 /* Dropdowns */
 .dropdown {
-  width: 100%;
+  width: 65.98px;
+  height: 25.31px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 0.9px solid #D9D9D9;
   border-radius: 4px;
-  background: white;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 10.85px;
+  line-height: 13.13px;
+  font-weight: 400;
+  background-image: url("https://img.icons8.com/ios-glyphs/30/sort-down.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  appearance: none;
+  background-size: 5.42px;
+  /* padding-right: 30px; */
+
+}
+
+.checkout-section {
+  
+  width: 341px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #ffffff;
+
+}
+
+.free-delivery{
+  color: #ff6b82;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.94px;
+}
+
+.total-price{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  color: #000000;
+}
+
+.add-to-cart {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 342px;
+  height: 40px;
+  background-color: #ff6b82;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
+
+
